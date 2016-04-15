@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20160415170821) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "marks", ["user_id"], name: "index_marks_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "location"
@@ -32,4 +34,5 @@ ActiveRecord::Schema.define(version: 20160415170821) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "marks", "users"
 end
