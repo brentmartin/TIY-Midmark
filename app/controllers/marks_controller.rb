@@ -1,8 +1,8 @@
 class MarksController < ApplicationController
-  skip_before_action :authenticate_user, only: [:show]
+  skip_before_action :authenticate_user, only: [:index, :show]
 
   def index
-    @marks = Mark.all
+    @marks = Mark.order('id DESC')
   end
 
   def new
