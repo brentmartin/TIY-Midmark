@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get '/sign_in', to: 'sessions#sign_in', as: 'sign_in'
+  post '/sign_in', to: 'sessions#create'
+  get '/sign_out', to: 'sessions#sign_out', as: 'sign_out'
+  delete '/sign_out', to: 'sessions#destroy'
 
   resources :users
   resources :marks
