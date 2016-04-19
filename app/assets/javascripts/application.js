@@ -16,8 +16,8 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('aside').on('click', '.new_mark h3', function() {
-    // $(this).addClass(marking);
+  $('aside').on('click', '.create_mark h3', function() {
+    $('.create_mark').parents("section").find('.new_mark').slideToggle();
     // $('article').prepend(marking);
   });
   // $(this).on('mouseleave', '.mark', function() {
