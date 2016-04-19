@@ -156,4 +156,18 @@ article {
     background-color: #ffffff;
     transition: all 500ms linear;
   }
+
+  input.fill_in {
+    width: 100%;
+    // border: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+    word-wrap: break-word;
+  }
+  input.fill_in:focus {
+    outline:none;
+  }
 }

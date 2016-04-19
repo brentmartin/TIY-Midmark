@@ -40,7 +40,7 @@
       <% if signed_in? %>
         <%= form_for(Mark.new, method: :POST) do |f| %>
           <div class='fill_in'><%= f.text_field :message, :class => 'fill_in' %></div>
-          <div class='button'><%= submit_tag, :class => 'button' %></div>
+          <div class='button'><%= submit_tag %></div>
         <% end %>
       <% end %>
     </div>
