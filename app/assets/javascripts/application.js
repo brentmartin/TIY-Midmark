@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// $(document).ready(function() {
+//   $(this).on('mouseenter', '.mark', function() {
+//     $(this).addClass('mark_highlight')
+//   });
+//   $(this).on('mouseleave', '.mark', function() {
+//     $(this).removeClass('mark_highlight')
+//   });
+// });
