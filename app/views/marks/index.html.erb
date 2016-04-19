@@ -1,20 +1,28 @@
-<p>
-  <% if signed_in? %>
-    <%= link_to "Sign Out", sign_out_path, method: :DELETE %>
-  <% else %>
-    <%= link_to "sign_in", sign_in_path %>
-  <% end %>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
 
-</p>
+<header>
+  <div class='login'>
+    <p>
+      <% if signed_in? %>
+        <%= link_to "Sign Out", sign_out_path, method: :DELETE %>
+      <% else %>
+        <%= link_to "sign_in", sign_in_path %>
+      <% end %>
+    </p>
+  </div>
+
+  <div class='logo'>
+    <span class='logo_mid'><h1> Mid</h1></span><span class='logo_mark'><h1>mark </h1></span>
+  </div>
+</header>
 
 <section>
-      <h1>Midmark</h1>
-
-
   <aside>
     <% if signed_in? %>
       <%= form_for(Mark.new, method: :POST) do |f| %>
-        <%= f.label :message %>
+        <h3><%= f.label :message %><h3/>
         <%= f.text_field :message %>
         <%= submit_tag %>
       <% end %>
@@ -24,9 +32,9 @@
   <article>
     <% @marks.each do |mark| %>
      <div class='mark'>
-      <p class="user">
-        User: <%= mark.user.name %>
-      </p>
+      <h2 class="user">
+        <%= mark.user.name %>
+      </h2>
       <p class="message">
         <%= mark.message %>
       </p>
