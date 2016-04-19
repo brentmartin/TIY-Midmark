@@ -14,6 +14,6 @@
              password: "password")
 
   4.times do
-  mark = Mark.create!(message: Faker::Company.catch_phrase + " " + Faker::Company.bs, user_id: user.id)
+  mark = Mark.create!(message: Faker::Company.catch_phrase + " " + Faker::Company.bs + Faker::Company.bs + Faker::Company.bs, user_id: user.id)
   end
 end
