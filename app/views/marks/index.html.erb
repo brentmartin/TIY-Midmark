@@ -14,27 +14,40 @@
   </div>
 
   <div class='logo'>
-    <span class='logo_mid'><h1> Mid</h1></span><span class='logo_mark'><h1>mark </h1></span>
+    <span class='logo_mid'><h1>Mid</h1></span><span class='logo_mark'><h1>mark</h1></span>
   </div>
 </header>
 
 <section>
 
   <aside>
-    <div>
+    <div class='create_mark'>
+      <h3>Create Mark</h3>
+    </div>
+    <!-- <div class='new_mark'>
       <% if signed_in? %>
         <%= form_for(Mark.new, method: :POST) do |f| %>
-          <h3><%= f.label :message %><h3/>
-          <%= f.text_field :message %>
-          <%= submit_tag %>
+          <h3><%= f.label :message %></h3>
+          <div class='input'><%= f.text_field :message %></div>
+          <div class='button'><%= submit_tag %></div>
         <% end %>
       <% end %>
-    </div>
+    </div> -->
   </aside>
 
   <article>
+    <div class='new_mark'>
+      <% if signed_in? %>
+        <%= form_for(Mark.new, method: :POST) do |f| %>
+          <div class='fill_in'><%= f.text_field :message, :class => 'fill_in' %></div>
+          <div class='button'><%= submit_tag, :class => 'button' %></div>
+        <% end %>
+      <% end %>
+    </div>
+    <hr style='border: none;' />
+
     <% @marks.each do |mark| %>
-     <div class='mark'>
+    <div class='mark'>
       <h2 class='user'>
         <%= mark.user.name %>
       </h2>

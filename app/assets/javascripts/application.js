@@ -15,11 +15,12 @@
 //= require turbolinks
 //= require_tree .
 
-// $(document).ready(function() {
-//   $(this).on('mouseenter', '.mark', function() {
-//     $(this).addClass('mark_highlight')
-//   });
-//   $(this).on('mouseleave', '.mark', function() {
-//     $(this).removeClass('mark_highlight')
-//   });
-// });
+$(document).ready(function() {
+  $('aside').on('click', '.new_mark h3', function() {
+    // $(this).addClass(marking);
+    // $('article').prepend(marking);
+  });
+  // $(this).on('mouseleave', '.mark', function() {
+  //   $(this).removeClass('mark_highlight')
+  // });
+});
