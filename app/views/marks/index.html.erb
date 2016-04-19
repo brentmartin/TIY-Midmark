@@ -19,27 +19,31 @@
 </header>
 
 <section>
+
   <aside>
-    <% if signed_in? %>
-      <%= form_for(Mark.new, method: :POST) do |f| %>
-        <h3><%= f.label :message %><h3/>
-        <%= f.text_field :message %>
-        <%= submit_tag %>
+    <div>
+      <% if signed_in? %>
+        <%= form_for(Mark.new, method: :POST) do |f| %>
+          <h3><%= f.label :message %><h3/>
+          <%= f.text_field :message %>
+          <%= submit_tag %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </aside>
 
   <article>
     <% @marks.each do |mark| %>
      <div class='mark'>
-      <h2 class="user">
+      <h2 class='user'>
         <%= mark.user.name %>
       </h2>
-      <p class="message">
+      <p class='message'>
         <%= mark.message %>
       </p>
     </div>
-    <hr style="border: none;" />
+    <hr style='border: none;' />
     <% end %>
   </article>
+
 </section>
