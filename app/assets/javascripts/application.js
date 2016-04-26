@@ -16,8 +16,10 @@
 //= require_tree .
 
 $(document).ready(function() {
+  $('article').find('.new_mark').slideUp()
   $('aside').on('click', '.create_mark h3', function() {
-    $('.create_mark').parents("section").find('.new_mark').slideToggle();
+    $('.create_mark').parents("section").find('.new_mark').fadeToggle().speed([2000])
+;
     // $('article').prepend(marking);
   });
   // $(this).on('mouseleave', '.mark', function() {
