@@ -24,4 +24,8 @@ $(document).ready(function() {
   // $(this).on('mouseleave', '.mark', function() {
   //   $(this).removeClass('mark_highlight')
   // });
+  $('aside').on('click', '.highlight_mark h3', function() {
+    $('.highlight_mark').parents("section").find('.mark').addClass( 'highlight' );
+    // $('article').prepend(marking);
+  });
 });
