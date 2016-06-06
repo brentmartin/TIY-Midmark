@@ -25,7 +25,7 @@ $(document).ready(function() {
   //   $(this).removeClass('mark_highlight')
   // });
   $('aside').on('click', '.highlight_mark h3', function() {
-    $('.highlight_mark').parents("section").find('.mark').addClass( 'highlight' );
+    $('.highlight_mark').parents("section").find('.mark').first().toggleClass( 'highlight' );
     // $('article').prepend(marking);
   });
 });
